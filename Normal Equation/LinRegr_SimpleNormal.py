@@ -16,7 +16,7 @@ X = data[['bias', 'lotsize']]
 Y = data['price']
 
 #Normal Equation to find W (Training Model)
-W = np.linalg.inv(X.T @ X) @ X.T @ Y
+W = np.linalg.pinv(X.T @ X) @ X.T @ Y
 print("The weights are :")
 print(W)
 
